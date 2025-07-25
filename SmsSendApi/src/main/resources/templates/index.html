@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Send SMS API</title>
+</head>
+<body>
+<h1>Test</h1>
+<form th:action="@{/sendsmsapi}" method="post">
+<label>Mobile No</label>
+<input type="text" name="mob" value="" placeholder="enter Your Mobile No" id="mob" required="required"/>
+
+<input type="submit" name="submit" value="Send SMS">
+</form>
+<div th:if="${response != null}">
+    <p th:text="${response}"></p>
+</div>
+
+</body>
+</html>
